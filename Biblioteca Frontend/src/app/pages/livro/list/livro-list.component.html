@@ -1,0 +1,33 @@
+<mat-card>
+    <div>
+        <div class="table-info">
+            <button mat-raised-button color="primary" [routerLink]="['/livro/cadastrar']">ADICIONAR LIVRO</button>
+            <input type="text" placeholder="buscar livro pelo titulo" />
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>isbn</th>
+                    <th>Categoria</th>
+                    <th class="actions">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let livro of livros">
+                    <td>{{livro.autor}}</td>
+                    <td>{{livro.titulo}}</td>
+                    <td>{{livro.isbn}}</td>
+                    <td>{{livro.categoria}}</td>
+                    <td class="actions">
+                        <button mat-raised-button color="primary">ALTERAR</button>
+                        <button mat-raised-button color="warn" (click)="deleteById(livro.id)">DELETAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</mat-card>
+
