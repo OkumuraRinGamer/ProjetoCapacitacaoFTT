@@ -1,4 +1,17 @@
 <div class="content">
-    <h1>biblioteca</h1>
+    <p>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <mat-icon class="mat-icon-livro">book</mat-icon>
+                <span class="span-titulo-pagina">Biblioteca</span>
+            </mat-toolbar-row>
+            <mat-toolbar-row>
+                <button mat-raised-button color="primary" routerLink="/livro">LIVROS</button>
+                <button mat-raised-button color="primary" routerLink="/categoria">CATEGORIAS</button>
+                <button mat-raised-button color="primary" routerLink="/categoria">ESTANTES</button>
+                <button mat-raised-button color="primary" routerLink="/categoria">SESÕES</button>
+            </mat-toolbar-row>
+        </mat-toolbar>   
+    </p>
     <router-outlet></router-outlet>
 </div>
