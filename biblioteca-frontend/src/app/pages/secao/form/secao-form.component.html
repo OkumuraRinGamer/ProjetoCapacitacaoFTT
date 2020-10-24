@@ -1,0 +1,20 @@
+<mat-card>
+  <form [formGroup]="secaoForm">
+    <mat-form-field>
+      <mat-label>Nome *</mat-label>
+      <input matInput placeholder="ex: Seção-1" formControlName="nome" />
+      <mat-hint>Obrigatório</mat-hint>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      class="mat-raised-button-salvar"
+      (click)="onSave(secaoForm.value)"
+    >
+      Salvar
+    </button>
+    <button mat-raised-button color="warn" (click)="onCancel()">
+      Calcelar
+    </button>
+  </form>
+</mat-card>

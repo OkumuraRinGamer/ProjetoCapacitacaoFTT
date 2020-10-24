@@ -1,5 +1,8 @@
 package br.com.servidorbiblioteca.domain.livro;
 
+import br.com.servidorbiblioteca.domain.categoria.Categoria;
+import br.com.servidorbiblioteca.domain.estante.Estante;
+import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -39,10 +42,14 @@ public class Livro implements Serializable {
     @Column(name = "isbn")
     private String isbn;
 
-    @NotEmpty
-    @NotBlank
-    @Size(max = 120)
-    @Column(name = "categoria")
-    private String categoria;
+    @NotNull
+    @JoinColumn(name = "categoria_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Categoria categoria;
+
+    @NotNull
+    @JoinColumn(name = "estante_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Estante estante;
 
 }

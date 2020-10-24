@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { CategoriaRoutingModule } from './categoria-routing.module';
-import { CategoriaListComponent } from './list/categoria-list.component';
-import { CategoriaService } from './categoria.service';
-import { CategoriaFormComponent } from './form/categoria-form.component';
+import { SecaoRoutingModule } from './secao-routing.module';
+import { SecaoListComponent } from './list/secao-list.component';
+import { SecaoService } from './secao.service';
+import { SecaoFormComponent } from './form/secao-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 
@@ -12,17 +12,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  declarations: [CategoriaListComponent, CategoriaFormComponent],
+  declarations: [SecaoListComponent, SecaoFormComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
     SharedModule,
-    CategoriaRoutingModule,
+    SecaoRoutingModule,
     MatCardModule,
     MatButtonModule,
     MatInputModule,
   ],
-  providers: [CategoriaService],
+  providers: [SecaoService],
 })
-export class CategoriaModule {}
+export class SecaoModule {}

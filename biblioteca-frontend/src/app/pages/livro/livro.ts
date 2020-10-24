@@ -3,5 +3,4 @@ export default class Livro {
   titulo: String;
   autor: String;
   isbn: String;
-  categoria: String;
 }

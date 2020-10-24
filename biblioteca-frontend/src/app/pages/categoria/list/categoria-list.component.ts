@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Categoria from '../categoria';
+import { CategoriaService } from '../categoria.service';
 
 @Component({
   selector: 'app-categoria-list',
@@ -6,6 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categoria-list.component.css'],
 })
 export class CategoriaListComponent implements OnInit {
-  constructor() {}
-  ngOnInit(): void {}
+  constructor(private categoriaService: CategoriaService) {}
+
+  categorias: Categoria[] = [];
+
+  ngOnInit(): void {
+    this.findAllCategorias();
+  }
+
+  findAllCategorias() {
+    this.categoriaService
+      .findAll()
+      .subscribe((response) => (this.categorias = response));
+  }
+
+  deleteById(id: number): void {
+    this.categoriaService
+      .deleteById(id)
+      .subscribe(() => this.findAllCategorias());
+  }
 }

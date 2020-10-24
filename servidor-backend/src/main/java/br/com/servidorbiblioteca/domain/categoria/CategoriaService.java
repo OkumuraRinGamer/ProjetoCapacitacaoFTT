@@ -1,10 +1,8 @@
-package br.com.servidorbiblioteca.domain.livro;
+package br.com.servidorbiblioteca.domain.categoria;
 
 import br.com.servidorbiblioteca.core.Service.AbstractService;
 import org.springframework.stereotype.Service;
 
-
 @Service
-public class LivroService extends AbstractService<Livro> {
-
+public class CategoriaService extends AbstractService<Categoria> {
 }

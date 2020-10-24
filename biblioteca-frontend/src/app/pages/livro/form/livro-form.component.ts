@@ -49,7 +49,6 @@ export class LivroFormComponent implements OnInit {
           Validators.minLength(13),
         ],
       ],
-      categoria: [null, [Validators.required, Validators.maxLength(120)]],
     });
   }
 

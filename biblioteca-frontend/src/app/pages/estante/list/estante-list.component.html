@@ -4,11 +4,11 @@
       <button
         mat-raised-button
         color="primary"
-        [routerLink]="['/categoria/cadastrar']"
+        [routerLink]="['/estante/cadastrar']"
       >
-        Adicionar Categoria
+        Adicionar Estante
       </button>
-      <input type="text" placeholder="buscar categoria pelo nome" />
+      <input type="text" placeholder="buscar estante pelo nome" />
     </div>
     <table>
       <thead>
@@ -18,20 +18,20 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let categoria of categorias">
-          <td>{{ categoria.nome }}</td>
+        <tr *ngFor="let estante of estantes">
+          <td>{{ estante.nome }}</td>
           <td class="actions">
             <button
               mat-raised-button
               color="primary"
-              [routerLink]="['/categoria/alterar', categoria.id]"
+              [routerLink]="['/estante/alterar', estante.id]"
             >
               Alterar
             </button>
             <button
               mat-raised-button
               color="warn"
-              (click)="deleteById(categoria.id)"
+              (click)="deleteById(estante.id)"
             >
               Deletar
             </button>

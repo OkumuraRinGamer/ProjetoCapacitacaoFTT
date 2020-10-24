@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { CategoriaRoutingModule } from './categoria-routing.module';
-import { CategoriaListComponent } from './list/categoria-list.component';
-import { CategoriaService } from './categoria.service';
-import { CategoriaFormComponent } from './form/categoria-form.component';
+import { EstanteRoutingModule } from './estante-routing.module';
+import { EstanteListComponent } from './list/estante-list.component';
+import { EstanteService } from './estante.service';
+import { EstanteFormComponent } from './form/estante-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 
@@ -12,17 +12,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  declarations: [CategoriaListComponent, CategoriaFormComponent],
+  declarations: [EstanteListComponent, EstanteFormComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
     SharedModule,
-    CategoriaRoutingModule,
+    EstanteRoutingModule,
     MatCardModule,
     MatButtonModule,
     MatInputModule,
   ],
-  providers: [CategoriaService],
+  providers: [EstanteService],
 })
-export class CategoriaModule {}
+export class EstanteModule {}
