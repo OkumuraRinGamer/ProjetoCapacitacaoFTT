@@ -21,6 +21,7 @@
           <td>Autor</td>
           <td>isbn</td>
           <td>Categoria</td>
+          <td>Estante</td>
           <td class="actions">Ações</td>
         </tr>
       </thead>
@@ -30,6 +31,7 @@
           <td>{{ livro.autor }}</td>
           <td>{{ livro.isbn }}</td>
           <td>{{ livro.categoria.nome }}</td>
+          <td>{{ livro.estante.nome }}</td>
           <td class="actions">
             <button
               mat-raised-button
