@@ -1,0 +1,48 @@
+<mat-card>
+  <form [formGroup]="livroForm">
+    <mat-form-field>
+      <mat-label>Título *</mat-label>
+      <input matInput placeholder="ex: Moby Dick" formControlName="titulo" />
+      <mat-hint>Obrigatório</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Autor *</mat-label>
+      <input
+        matInput
+        placeholder="ex: Herman Melville"
+        formControlName="autor"
+      />
+      <mat-hint>Obrigatório</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>isbn *</mat-label>
+      <input
+        matInput
+        placeholder="ex: 9780140861723"
+        formControlName="isbn"
+        (input)="onlyNumbers($event)"
+      />
+      <mat-hint>Obrigatório</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Categoria *</mat-label>
+      <input
+        matInput
+        placeholder="ex: Ficção Marítima"
+        formControlName="categoria"
+      />
+      <mat-hint>Obrigatório</mat-hint>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      class="mat-raised-button-salvar"
+      (click)="onSave(livroForm.value)"
+    >
+      Salvar
+    </button>
+    <button mat-raised-button color="warn" (click)="onCancel()">
+      Calcelar
+    </button>
+  </form>
+</mat-card>

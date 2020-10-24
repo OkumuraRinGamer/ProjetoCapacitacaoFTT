@@ -1,0 +1,26 @@
+<div class="content">
+  <p>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <mat-icon class="mat-icon-livro">book</mat-icon>
+        <span class="span-titulo-pagina">Biblioteca</span>
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <button mat-raised-button color="primary" routerLink="/livro">
+          Livros
+        </button>
+        <button mat-raised-button color="primary" routerLink="/categoria">
+          Categorias
+        </button>
+        <button mat-raised-button color="primary" routerLink="/categoria">
+          Estantes
+        </button>
+        <button mat-raised-button color="primary" routerLink="/categoria">
+          Sessões
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p>
+  <router-outlet></router-outlet>
+  <footer class="footer">CAPACITAÇÃO FTT - &copy;2020</footer>
+</div>
