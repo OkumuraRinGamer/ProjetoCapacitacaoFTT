@@ -24,6 +24,24 @@
       />
       <mat-hint>Obrigatório</mat-hint>
     </mat-form-field>
+    <mat-form-field>
+      <mat-label>Categoria *</mat-label>
+      <mat-select formControlName="categoria">
+        <mat-option *ngFor="let categoria of categorias" [value]="categoria">
+          {{ categoria.nome }}
+        </mat-option>
+      </mat-select>
+      <mat-hint>Obrigatório</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Estante *</mat-label>
+      <mat-select formControlName="estante">
+        <mat-option *ngFor="let estante of estantes" [value]="estante">
+          {{ estante.nome }}
+        </mat-option>
+      </mat-select>
+      <mat-hint>Obrigatório</mat-hint>
+    </mat-form-field>
     <button
       mat-raised-button
       color="primary"

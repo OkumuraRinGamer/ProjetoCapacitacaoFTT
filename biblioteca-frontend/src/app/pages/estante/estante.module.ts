@@ -6,10 +6,12 @@ import { EstanteService } from './estante.service';
 import { EstanteFormComponent } from './form/estante-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { SecaoService } from '../secao/secao.service';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [EstanteListComponent, EstanteFormComponent],
@@ -22,7 +24,8 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
+    MatSelectModule,
   ],
-  providers: [EstanteService],
+  providers: [EstanteService, SecaoService],
 })
 export class EstanteModule {}

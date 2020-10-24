@@ -8,16 +8,20 @@
       >
         Adicionar Livro
       </button>
-      <input type="text" placeholder="buscar livro pelo titulo" />
+      <input
+        type="text"
+        placeholder="&#x2315; buscar livro pelo titulo"
+        class="input-busca"
+      />
     </div>
     <table>
       <thead>
-        <tr>
-          <th>Titulo</th>
-          <th>Autor</th>
-          <th>isbn</th>
-          <th>Categoria</th>
-          <th class="actions">Ações</th>
+        <tr class="cabecalho-tabela">
+          <td>Titulo</td>
+          <td>Autor</td>
+          <td>isbn</td>
+          <td>Categoria</td>
+          <td class="actions">Ações</td>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +29,7 @@
           <td>{{ livro.titulo }}</td>
           <td>{{ livro.autor }}</td>
           <td>{{ livro.isbn }}</td>
+          <td>{{ livro.categoria.nome }}</td>
           <td class="actions">
             <button
               mat-raised-button

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import Secao from '../../secao/secao';
+import { SecaoService } from '../../secao/secao.service';
 import Estante from '../estante';
 import { EstanteService } from '../estante.service';
 
@@ -14,14 +16,17 @@ export class EstanteFormComponent implements OnInit {
     private router: Router,
     private builder: FormBuilder,
     private estanteService: EstanteService,
+    private secaoService: SecaoService,
     private activatedRoute: ActivatedRoute
   ) {}
 
   estanteForm: FormGroup;
+  secoes: Secao[] = [];
   action: string;
 
   ngOnInit(): void {
     this.createForm();
+    this.findAllSecoes();
     this.action = this.activatedRoute.snapshot.url[0].path;
 
     if (this.action == 'alterar') {
@@ -40,7 +45,14 @@ export class EstanteFormComponent implements OnInit {
     this.estanteForm = this.builder.group({
       id: null,
       nome: [null, [Validators.required, Validators.maxLength(120)]],
+      secao: null,
     });
+  }
+
+  findAllSecoes() {
+    this.secaoService
+      .findAll()
+      .subscribe((response) => (this.secoes = response));
   }
 
   onSave(value: Estante): void {

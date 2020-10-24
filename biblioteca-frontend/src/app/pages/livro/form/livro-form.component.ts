@@ -1,6 +1,11 @@
+import { typeWithParameters } from '@angular/compiler/src/render3/util';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import Categoria from '../../categoria/categoria';
+import { CategoriaService } from '../../categoria/categoria.service';
+import Estante from '../../estante/estante';
+import { EstanteService } from '../../estante/estante.service';
 import Livro from '../livro';
 import { LivroService } from '../livro.service';
 
@@ -14,14 +19,20 @@ export class LivroFormComponent implements OnInit {
     private router: Router,
     private builder: FormBuilder,
     private livroService: LivroService,
+    private categoriaService: CategoriaService,
+    private estanteService: EstanteService,
     private activatedRoute: ActivatedRoute
   ) {}
 
   livroForm: FormGroup;
+  categorias: Categoria[] = [];
+  estantes: Estante[] = [];
   action: string;
 
   ngOnInit(): void {
     this.createForm();
+    this.findAllCategorias();
+    this.findAllEstantes();
     this.action = this.activatedRoute.snapshot.url[0].path;
 
     if (this.action == 'alterar') {
@@ -49,6 +60,26 @@ export class LivroFormComponent implements OnInit {
           Validators.minLength(13),
         ],
       ],
+      categoria: null,
+      estante: null,
+    });
+  }
+
+  findAllCategorias() {
+    this.categoriaService.findAll().subscribe((response) => {
+      this.categorias = response;
+      if (this.action == 'alterar') {
+        this.setValue();
+      }
+    });
+  }
+
+  findAllEstantes() {
+    this.estanteService.findAll().subscribe((response) => {
+      this.estantes = response;
+      if (this.action == 'alterar') {
+        this.setValue();
+      }
     });
   }
 

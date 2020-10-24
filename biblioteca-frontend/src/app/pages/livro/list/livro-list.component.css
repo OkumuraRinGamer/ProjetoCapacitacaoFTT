@@ -11,7 +11,7 @@
 }
 
 .actions button {
-  margin: 10px;
+  margin: 5px;
 }
 
 .table-info > input {
@@ -24,8 +24,8 @@
 table {
   margin-top: 20px;
   border-collapse: collapse;
+  min-width: 700px;
   width: 100%;
-  border: 1px solid #ccc;
   width: 100%;
 }
 
@@ -33,17 +33,17 @@ th,
 td {
   text-align: left;
   padding: 8px;
-  border: 1px solid #ccc;
-}
-
-thead tr {
-  background-color: rgb(228, 228, 228);
+  border-bottom: 1px solid #ccc;
 }
 
 .actions {
   text-align: center;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+.cabecalho-tabela {
+  color: #707070;
+}
+
+.input-busca {
+  width: 180px;
 }
