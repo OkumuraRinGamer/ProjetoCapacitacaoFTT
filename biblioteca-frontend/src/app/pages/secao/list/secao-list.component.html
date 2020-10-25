@@ -1,18 +1,19 @@
 <mat-card>
   <div>
-    <div class="table-info">
-      <button
-        mat-raised-button
-        color="primary"
-        [routerLink]="['/secao/cadastrar']"
-      >
-        Adicionar Seção
-      </button>
-      <input
-        type="text"
-        placeholder="&#x2315; buscar seção pelo nome"
-        class="input-busca"
-      />
+    <div>
+      <form class="table-info">
+        <button
+          mat-raised-button
+          color="primary"
+          [routerLink]="['/secao/cadastrar']"
+          class="button-cadastra"
+        >
+          Adicionar Seção
+        </button>
+        <mat-form-field>
+          <input matInput type="text" placeholder="&#x2315; buscar seção" />
+        </mat-form-field>
+      </form>
     </div>
     <table>
       <thead>

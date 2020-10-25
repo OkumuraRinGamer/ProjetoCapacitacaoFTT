@@ -1,18 +1,19 @@
 <mat-card>
   <div>
-    <div class="table-info">
-      <button
-        mat-raised-button
-        color="primary"
-        [routerLink]="['/estante/cadastrar']"
-      >
-        Adicionar Estante
-      </button>
-      <input
-        type="text"
-        placeholder="&#x2315; buscar estante pelo nome"
-        class="input-busca"
-      />
+    <div>
+      <form class="table-info">
+        <button
+          mat-raised-button
+          color="primary"
+          [routerLink]="['/estante/cadastrar']"
+          class="button-cadastra"
+        >
+          Adicionar Estante
+        </button>
+        <mat-form-field>
+          <input matInput type="text" placeholder="&#x2315; buscar estante" />
+        </mat-form-field>
+      </form>
     </div>
     <table>
       <thead>

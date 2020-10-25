@@ -1,18 +1,19 @@
 <mat-card>
   <div>
-    <div class="table-info">
-      <button
-        mat-raised-button
-        color="primary"
-        [routerLink]="['/livro/cadastrar']"
-      >
-        Adicionar Livro
-      </button>
-      <input
-        type="text"
-        placeholder="&#x2315; buscar livro pelo titulo"
-        class="input-busca"
-      />
+    <div>
+      <form class="table-info">
+        <button
+          mat-raised-button
+          color="primary"
+          [routerLink]="['/livro/cadastrar']"
+          class="button-cadastra"
+        >
+          Adicionar Livro
+        </button>
+        <mat-form-field>
+          <input matInput type="text" placeholder="&#x2315; buscar livro" />
+        </mat-form-field>
+      </form>
     </div>
     <table>
       <thead>

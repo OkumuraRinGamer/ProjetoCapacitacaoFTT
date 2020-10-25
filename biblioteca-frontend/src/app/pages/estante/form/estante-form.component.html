@@ -6,8 +6,8 @@
       <mat-hint>Obrigatório</mat-hint>
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Secao *</mat-label>
-      <mat-select formControlName="secao">
+      <mat-label>Secao</mat-label>
+      <mat-select formControlName="secao" required>
         <mat-option *ngFor="let secao of secoes" [value]="secao">
           {{ secao.nome }}
         </mat-option>
