@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EstanteFormComponent } from './form/estante-form.component';
 import { EstanteListComponent } from './list/estante-list.component';
+import { EstanteVerLivroComponent } from './ver-livro/estante-ver-livro.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'alterar/:id',
     component: EstanteFormComponent,
+  },
+  {
+    path: 'ver-livros/:id',
+    component: EstanteVerLivroComponent,
   },
 ];
 

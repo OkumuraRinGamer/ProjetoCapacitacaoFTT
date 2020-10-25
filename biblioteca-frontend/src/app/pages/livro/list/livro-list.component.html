@@ -1,28 +1,22 @@
 <mat-card>
   <div>
     <div>
-      <form class="table-info">
-        <button
-          mat-raised-button
-          color="primary"
-          [routerLink]="['/livro/cadastrar']"
-          class="button-cadastra"
-        >
-          Adicionar Livro
-        </button>
-        <mat-form-field>
-          <input matInput type="text" placeholder="&#x2315; buscar livro" />
-        </mat-form-field>
-      </form>
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/livro/cadastrar']"
+        class="button-cadastra"
+      >
+        Adicionar Livro
+      </button>
     </div>
-    <table>
+    <table class="mat-elevation-z8">
       <thead>
         <tr class="cabecalho-tabela">
           <td>Titulo</td>
           <td>Autor</td>
           <td>isbn</td>
           <td>Categoria</td>
-          <td>Estante</td>
           <td class="actions">Ações</td>
         </tr>
       </thead>
@@ -32,7 +26,6 @@
           <td>{{ livro.autor }}</td>
           <td>{{ livro.isbn }}</td>
           <td>{{ livro.categoria.nome }}</td>
-          <td>{{ livro.estante.nome }}</td>
           <td class="actions">
             <button
               mat-raised-button

@@ -30,7 +30,6 @@ public class Secao implements Serializable {
     @Column(name = "nome")
     private String nome;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "secao", cascade = CascadeType.ALL)
     private List<Estante> estantes;
 

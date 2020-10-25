@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.table-info {
+  display: flex;
+  justify-content: space-between;
+}
+
 .actions button {
   margin: 5px;
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { EstanteRoutingModule } from './estante-routing.module';
 import { EstanteListComponent } from './list/estante-list.component';
 import { EstanteService } from './estante.service';
@@ -12,9 +12,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { LivroService } from '../livro/livro.service';
+import { EstanteVerLivroComponent } from './ver-livro/estante-ver-livro.component';
 
 @NgModule({
-  declarations: [EstanteListComponent, EstanteFormComponent],
+  declarations: [
+    EstanteListComponent,
+    EstanteFormComponent,
+    EstanteVerLivroComponent,
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -26,6 +32,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatSelectModule,
   ],
-  providers: [EstanteService, SecaoService],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [EstanteService, SecaoService, LivroService],
 })
 export class EstanteModule {}

@@ -1,21 +1,16 @@
 <mat-card>
   <div>
     <div>
-      <form class="table-info">
-        <button
-          mat-raised-button
-          color="primary"
-          [routerLink]="['/secao/cadastrar']"
-          class="button-cadastra"
-        >
-          Adicionar Seção
-        </button>
-        <mat-form-field>
-          <input matInput type="text" placeholder="&#x2315; buscar seção" />
-        </mat-form-field>
-      </form>
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/secao/cadastrar']"
+        class="button-cadastra"
+      >
+        Adicionar Seção
+      </button>
     </div>
-    <table>
+    <table class="mat-elevation-z8">
       <thead>
         <tr class="cabecalho-tabela">
           <td>Nome</td>
@@ -40,7 +35,13 @@
             >
               Deletar
             </button>
-            <button mat-raised-button color="accent">Ver Estantes</button>
+            <button
+              mat-raised-button
+              color="accent"
+              [routerLink]="['/secao/ver-estantes', secao.id]"
+            >
+              Ver Estantes
+            </button>
           </td>
         </tr>
       </tbody>

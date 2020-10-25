@@ -4,10 +4,10 @@
       <button
         mat-raised-button
         color="primary"
-        [routerLink]="['/estante/cadastrar']"
+        [routerLink]="['/secao']"
         class="button-cadastra"
       >
-        Adicionar Estante
+        Voltar
       </button>
     </div>
     <table class="mat-elevation-z8">
@@ -18,29 +18,22 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let estante of estantes">
-          <td>{{ estante.nome }}</td>
+        <tr *ngFor="let secao of secoes" [value]="secao">
+          <td>{{ secao.nome }}</td>
           <td class="actions">
             <button
               mat-raised-button
               color="primary"
-              [routerLink]="['/estante/alterar', estante.id]"
+              [routerLink]="['/secao/alterar', secao.id]"
             >
               Alterar
             </button>
             <button
               mat-raised-button
               color="warn"
-              (click)="deleteById(estante.id)"
+              (click)="deleteById(secao.id)"
             >
               Deletar
-            </button>
-            <button
-              mat-raised-button
-              color="accent"
-              [routerLink]="['/estante/ver-livros', estante.id]"
-            >
-              Ver Livros
             </button>
           </td>
         </tr>

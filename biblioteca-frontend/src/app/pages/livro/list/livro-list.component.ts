@@ -5,7 +5,7 @@ import { LivroService } from '../livro.service';
 @Component({
   selector: 'app-livro-list',
   templateUrl: './livro-list.component.html',
-  styleUrls: ['./livro-list.component.css']
+  styleUrls: ['./livro-list.component.css'],
 })
 export class LivroListComponent implements OnInit {
   constructor(private livroService: LivroService) {}
@@ -21,9 +21,8 @@ export class LivroListComponent implements OnInit {
       .findAll()
       .subscribe((response) => (this.livros = response));
   }
-  
+
   deleteById(id: number): void {
     this.livroService.deleteById(id).subscribe(() => this.findAllLivros());
   }
-
 }

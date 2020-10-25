@@ -1,21 +1,16 @@
 <mat-card>
   <div>
     <div>
-      <form class="table-info">
-        <button
-          mat-raised-button
-          color="primary"
-          [routerLink]="['/categoria/cadastrar']"
-          class="button-cadastra"
-        >
-          Adicionar Categoria
-        </button>
-        <mat-form-field>
-          <input matInput type="text" placeholder="&#x2315; buscar categoria" />
-        </mat-form-field>
-      </form>
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/categoria/cadastrar']"
+        class="button-cadastra"
+      >
+        Adicionar Categoria
+      </button>
     </div>
-    <table>
+    <table class="mat-elevation-z8">
       <thead>
         <tr class="cabecalho-tabela">
           <td>Nome</td>
