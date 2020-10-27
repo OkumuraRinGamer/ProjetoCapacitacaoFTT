@@ -48,7 +48,6 @@ public class Livro implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     private Categoria categoria;
 
-    @JsonIgnore
     @NotNull
     @JoinColumn(name = "estante_id", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.EAGER)

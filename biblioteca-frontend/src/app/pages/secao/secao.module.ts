@@ -11,7 +11,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { SecaoVerEstanteComponent } from './ver-estante/secao-ver-estante.component';
-import { EstanteService } from '../estante/estante.service';
 
 @NgModule({
   declarations: [
@@ -30,6 +29,6 @@ import { EstanteService } from '../estante/estante.service';
     MatInputModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [SecaoService, EstanteService],
+  providers: [SecaoService],
 })
 export class SecaoModule {}

@@ -33,12 +33,12 @@ public class Estante implements Serializable {
     @Column(name = "nome")
     private String nome;
 
-    @JsonIgnore
     @NotNull
     @JoinColumn(name = "secao_id", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.EAGER)
     private Secao secao;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "estante", cascade = CascadeType.ALL)
     private List<Livro> livros;
 
