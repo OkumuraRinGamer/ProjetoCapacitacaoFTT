@@ -1,4 +1,3 @@
-import Livro from '../livro/livro';
 import Secao from '../secao/secao';
 
 export default class Estante {

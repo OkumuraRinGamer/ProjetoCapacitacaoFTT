@@ -2,7 +2,6 @@ package br.com.servidorbiblioteca.domain.livro;
 
 import br.com.servidorbiblioteca.domain.categoria.Categoria;
 import br.com.servidorbiblioteca.domain.estante.Estante;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
